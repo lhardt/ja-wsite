@@ -331,7 +331,9 @@ h2 {
 
 .card-container{
 	display: flex;
-	width: 100%;
+	width: 900%;
+	max-width: 90vw;
+	flex-wrap: wrap;
 	gap: 10px;
 	flex-direction: horizontal;
 	justify-content: center;
@@ -359,6 +361,32 @@ h2 {
 	margin-bottom: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+.contact-form {
+	min-width: 300px;
+	align-self: start;
+}
+.contact-form label, .contact-form input, .contact-form textarea{
+	display: block;
+}
+
+.contact-form label span {
+	padding-left: 10px;
+	font-weight: bolder;
+}
+
+.contact-form input, .contact-form textarea {
+	width: 400px;
+}
+.contact-form input:not([type~="submit"]), .contact-form textarea {
+	border: 1px solid transparent;
+	max-width: 90vw;
+	padding: 10px;
+	font-family: 'Nunito Sans';
+	font-size: 1.0rem;
+	border-radius: 15px;
+	margin-bottom: 20px;
 }
 
 

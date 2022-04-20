@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="fa/css/font-awesome.css">
 		<title>JA Serviços Gerais</title>
 	</head>
-	<body onscroll="onScroll()">
+	<body onscroll="onScroll()" onload="onScroll()">
 		<header id="pageheader" class="wcontainer">
 			<img class="header-logo" src="images/logo-shadow-subtitle.png">
 			<div class="flex-spacer"></div>
@@ -63,6 +63,34 @@
 					<h3>Serviços de Apoio</h3>
 				</div>
 			</div>
+		</section>
+
+		<section  class="full wcontainer">
+			<h2>Contato</h2>
+			<div>
+				<form class="contact-form" action="#" method="POST">
+					<label>
+						<span>Seu e-mail:</span>
+						<input name="email" type="e-mail" placeholder="E-mail" required></input>
+					</label>
+
+					<label>
+						<span>Seu nome:</span>
+						<input name="name" type="text" placeholder="Nome" required></input>
+					</label>
+
+					<label>
+						<span>Sua mensagem:</span>
+
+						<textarea name="message" lines="10" placeholder="Olá! Eu gostaria de falar sobre..." required></textarea>
+					</label>
+
+					<label for="submit">
+						<input class="splash-button" name="submit" type="submit" value="Enviar"></input>
+					</label>
+				</form>
+			</div>
+
 		</section>
 
 		<footer>
