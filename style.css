@@ -12,7 +12,7 @@ body {
 	max-width: 100%; /* prevent scrollbar bug */
 	margin: 0;
 	color: white;
-	font-family: 'Roboto';
+	font-family: 'Nunito Sans';
 }
 
 body > header {
@@ -589,6 +589,62 @@ body > footer {
 	font-family: 'Lato';
 	src: url('fonts/lato-bold.ttf');
 	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Lato';
+	src: url('fonts/lato-bold-italic.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: 'Lato';
+	src: url('fonts/lato-light-italic.ttf');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: 'Lato';
+	src: url('fonts/lato-thin-italic.ttf');
+	font-weight: 200;
+	font-style: italic;
+}
+
+
+
+
+
+
+
+
+@font-face{
+	font-family: 'Nunito Sans';
+	src: url('fonts/nunito-black.ttf');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Nunito Sans';
+	src: url('fonts/nunito-regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Nunito Sans';
+	src: url('fonts/nunito-bold.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'Nunito Sans';
+	src: url('fonts/nunito-light.ttf');
+	font-weight: 300;
 	font-style: normal;
 }
 
