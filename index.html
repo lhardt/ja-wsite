@@ -11,7 +11,7 @@
 			<img class="header-logo" src="images/logo-shadow-subtitle.png">
 			<div class="flex-spacer"></div>
 
-			<ul id="menu" class="menu center-content">
+			<!-- <ul id="menu" class="menu center-content">
 				<li class="ontoggle">
 					<span class="roundbutton"  onclick="toggle_menu()">
 						<span class="fa fa-angle-double-right fa-lg"></span>
@@ -23,24 +23,24 @@
 			</ul>
 			<a class="roundbutton menu-toggle" onclick="toggle_menu()">
 				<span class="fa fa-bars"></span>
-			</a>
+			</a> -->
 		</header>
 		<div class="section-anchor" id="top"> </div>
 		<section class="full wcontainer horizontal splashsection">
 			<div>
 
 				<div class="splash-text">
-					O <span class="text-highlight">potencial</span> da sua<br>empresa está aqui.
+					Em construção.<br>Volte em breve!.
+					<!-- O <span class="text-highlight">potencial</span> da sua<br>empresa está aqui. -->
 				</div>
 				<div class="splash-buttons">
 					<a class="splash-button highlight" href="#contact">
 						Contato
 					</a>
-					<a class="splash-button" href="#about">
+					<!-- <a class="splash-button" href="#about">
 						Ver Mais
-					</a>
+					</a> -->
 				</div>
-
 			</div>
 		</section>
 		<section class="flexx light wcontainer">
@@ -68,21 +68,24 @@
 		<section  class="flexx wcontainer">
 			<h2>Contato</h2>
 			<div>
-				<form class="contact-form" action="#" method="POST">
+				<form class="contact-form" action="#" method="POST" enctype="multipart/form-data" onsubmit="return validateFormData(this);">
 					<label>
 						<span>Seu e-mail:</span>
 						<input name="email" type="e-mail" placeholder="E-mail" required></input>
+						<span class="label-on-error" id="email-onerror">- Digite um e-mail válido.</span>
 					</label>
 
 					<label>
 						<span>Seu nome:</span>
 						<input name="name" type="text" placeholder="Nome" required></input>
+						<span class="label-on-error" id="name-onerror">- Digite um nome válido.</span>
 					</label>
 
 					<label>
 						<span>Sua mensagem:</span>
 
 						<textarea name="message" lines="10" placeholder="Olá! Eu gostaria de falar sobre..." required></textarea>
+						<span class="label-on-error" id="message-onerror">- Digite uma mensagem.</span>
 					</label>
 
 					<label for="submit">
@@ -98,5 +101,25 @@
 		</footer>
 
 		<script src="main.js"></script>
+		<script>
+			function validateFormData(form){
+				var email = form.elements['email'];
+				var name = form.elements['name'];
+				var msg = form.elements['message'];
+
+				email.value = email.value.toLowerCase();
+
+				var email_ok = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.value);
+				var name_ok = name.value.length > 0;
+				var msg_ok = msg.value.length > 0;
+
+				document.getElementById('email-onerror').style.display = (email_ok?"none":"inline");
+				document.getElementById('name-onerror').style.display = (name_ok?"none":"inline");
+				document.getElementById('message-onerror').style.display = (msg_ok?"none":"inline");
+
+				return (email_ok && passw_ok);
+			}
+		</script>
+
 	</body>
 </html>
